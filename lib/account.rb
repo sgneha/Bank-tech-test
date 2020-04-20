@@ -4,4 +4,9 @@ class Account
     @account_no = account_no
     @balance = 0
   end
+
+  def deposit(amount)
+    @balance += amount
+
+  end
 end
