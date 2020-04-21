@@ -24,4 +24,8 @@ class Account
     
   end
 
+  def print_statement
+    @transactions
+  end
+
 end

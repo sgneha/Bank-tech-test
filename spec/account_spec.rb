@@ -37,4 +37,14 @@ describe Account do
       expect(account.transactions[1]).to be_instance_of(Transaction)
     end
   end
+
+  describe '#print_statement' do
+    it 'prints statement' do
+      account.deposit(1000)
+      account.withdraw(500)
+      expect(account.print_statement).to eq account.transactions
+    end
+
+    
+  end
 end
