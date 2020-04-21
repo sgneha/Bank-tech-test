@@ -38,12 +38,12 @@ I will able to withdraw my money from Bank
 ```
 As a Customer
 so that I know how much money I have
-I will able to print statemnt of my account
+I will able to print statement of my account
 ```
 ```
 As a Customer
 so that I can check my transactions
-I will able be to see date,credit/debit amount and balance after each transaction in my statement
+I will able be to see date,credit/debit amount and balance in my statement
 ```
 
 

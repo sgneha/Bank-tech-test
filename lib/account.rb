@@ -9,6 +9,7 @@ class Account
     @balance += amount
     transaction = store_transaction(:credit, amount, balance)
     @transactions.push(transaction)
+    "Credit of amount £#{amount} was successfull"
     
   end
 
@@ -18,6 +19,8 @@ class Account
     @balance -= amount
     transaction = store_transaction(:debit, amount, balance)
     @transactions.push(transaction)
+    "Debit of amount £#{amount} was successfull"
+
     
   end
 
