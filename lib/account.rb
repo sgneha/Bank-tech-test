@@ -9,10 +9,16 @@ class Account
 
   def deposit(amount)
     @balance += amount
+    transaction = Transaction.new('credit', amount, balance)
+    @transactions.push(transaction)
+    
   end
 
   def withdraw(amount)
     @balance -= amount
+    transaction = Transaction.new('debit', amount, balance)
+    @transactions.push(transaction)
+    
   end
 
 end
