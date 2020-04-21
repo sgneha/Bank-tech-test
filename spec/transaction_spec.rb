@@ -1,11 +1,11 @@
 require 'transaction'
 describe 'Transaction' do
 
-  let(:transaction) { Transaction.new('credit', 1000, 2000) }
+  let(:transaction) { Transaction.new(:credit, 1000, 2000) }
   describe '#initialize' do
-
+    
     it 'new transaction with type' do
-      expect(transaction.type).to eq 'credit'
+      expect(transaction.type).to eq :credit
     end
     it 'new transaction with amount' do
       expect(transaction.amount).to eq 1000
