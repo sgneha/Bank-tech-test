@@ -36,6 +36,11 @@ describe Account do
       account.withdraw(500)
       expect(account.transactions[1]).to be_instance_of(Transaction)
     end
+    it 'Withdrawal not successful due to less balance' do
+      account.deposit(1000)
+      expect { account.withdraw(1500) }.to raise_error 'Not sufficient balance'
+    end
+
   end
 
   describe '#print_statement' do

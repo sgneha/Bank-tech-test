@@ -13,6 +13,8 @@ class Account
   end
 
   def withdraw(amount)
+    fail 'Not sufficient balance' unless valid_transaction(amount)
+
     @balance -= amount
     transaction = store_transaction(:debit, amount, balance)
     @transactions.push(transaction)
@@ -29,4 +31,7 @@ class Account
     Transaction.new(type, amount, balance)
   end  
 
+  def valid_transaction(amount)
+    amount <= balance
+  end
 end
