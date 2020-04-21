@@ -19,4 +19,13 @@ describe Bank do
       expect(bank.account.balance).to eq 80
     end
   end
+  describe '#print_account_statement' do
+    it 'shows account statement' do
+      bank.deposit_money(100)
+      bank.withdraw_money(20)
+      statement = bank.account.print_statement
+      expect(bank.print_account_statement).to eq statement
+
+    end
+  end
 end
