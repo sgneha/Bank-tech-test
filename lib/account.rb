@@ -1,7 +1,6 @@
 class Account
-  attr_reader :account_no, :balance, :transactions
-  def initialize(account_no)
-    @account_no = account_no
+  attr_reader :balance, :transactions
+  def initialize
     @balance = 0
     @transactions = []
   end

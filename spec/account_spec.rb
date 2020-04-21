@@ -1,7 +1,7 @@
 require 'account'
 
 describe Account do
-  let(:account) { Account.new(20) }
+  let(:account) { Account.new }
   describe '#initialize' do
     it 'initializes with zero balance' do
       expect(account.balance).to eq 0
