@@ -1,15 +1,12 @@
 class Transaction
 
-  attr_reader :transaction_detail
+  attr_reader :date, :type, :amount, :balance
 
-  def initialize
-    @transaction_detail = {}
+  def initialize(type, amount, balance)
+    @date = Time.now
+    @type = type
+    @amount = amount
+    @balance = balance
   end
 
-  def make_deposit(account_no, amount, balance)
-    @transaction_detail[:account_no] = account_no
-    @transaction_detail[:date] = Time.now
-    @transaction_detail[:credit] = amount
-    @transaction_detail[:balance] = balance
-  end
 end

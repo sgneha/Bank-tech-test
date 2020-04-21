@@ -1,16 +1,17 @@
 require 'transaction'
 describe 'Transaction' do
 
-  let(:transaction) { Transaction.new }
+  let(:transaction) { Transaction.new('credit', 1000, 2000) }
+  describe '#initialize' do
 
-  it 'initiates the transaction with a empty transaction details' do
-    expect(transaction.transaction_detail).to(be {})
+    it 'new transaction with type' do
+      expect(transaction.type).to eq 'credit'
+    end
+    it 'new transaction with amount' do
+      expect(transaction.amount).to eq 1000
+    end
+    it 'new transaction with balance' do
+      expect(transaction.balance).to eq 2000
+    end
   end
-
-  it 'saves details of credit transaction made' do
-    transaction.make_deposit(10, 1000, 5000)
-    expect(transaction.transaction_detail[:balance]).to eq 5000
-  end
-
-  
 end
