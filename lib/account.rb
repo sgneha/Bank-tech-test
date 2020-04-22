@@ -20,8 +20,6 @@ class Account
     transaction = store_transaction(:debit, amount, balance)
     @transactions.push(transaction)
     "Debit of amount £#{amount} was successfull"
-
-    
   end
 
   def print_statement

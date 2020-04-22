@@ -11,9 +11,9 @@ class Statement
     history = []
     history << HEADER
     @transactions.reverse.each do |line|
-      history << "#{line.date}" + "||" + "#{select_type(line)}" + "||" + "#{format(line.balance)}" 
+      history << "#{line.date.strftime("%d/%m/%Y")}" + "||" + "#{select_type(line)}" + "||" + "#{format(line.balance)}" 
     end
-    history.join("\n")
+    print history.join("\n")
   end
   private
   
