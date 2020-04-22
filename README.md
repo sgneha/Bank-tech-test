@@ -49,7 +49,7 @@ I will able be to see date,credit/debit amount and balance in my statement
 ```
 ## Class Diagram
 
-![class Diagram](public/image.png)
+![class Diagram](public/class_diagram.png)
 
 
 
