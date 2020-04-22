@@ -43,13 +43,13 @@ describe Account do
 
   end
 
-  describe '#print_statement' do
-    it 'prints statement' do
-      account.deposit(1000)
-      account.withdraw(500)
-      expect(account.print_statement).to eq account.transactions
-    end
+  # describe '#print_statement' do
+  #   it 'prints statement' do
+  #     account.deposit(1000)
+  #     account.withdraw(500)
+  #     expect(account.print_statement).to eq account.transactions
+  #   end
 
     
-  end
+  # end
 end
