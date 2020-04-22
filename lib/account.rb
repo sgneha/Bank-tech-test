@@ -1,3 +1,5 @@
+require './lib/transaction.rb'
+require './lib/statement.rb'
 class Account
   attr_reader :balance, :transactions
   def initialize

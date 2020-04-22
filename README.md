@@ -16,6 +16,8 @@ $ bundle install
 
 
 
+
+
 ## Running the tests
 
 
@@ -45,6 +47,9 @@ As a Customer
 so that I can check my transactions
 I will able be to see date,credit/debit amount and balance in my statement
 ```
+## Class Diagram
+
+![class Diagram](public/image.png)
 
 
 
@@ -53,6 +58,24 @@ I will able be to see date,credit/debit amount and balance in my statement
 * Ruby
 * Rspec
 
+## IRB
+```
+2.6.5 :001 > require './lib/account.rb'
+ => true 
+2.6.5 :002 >   account = Account.new
+ => #<Account:0x00007fc9830ef138 @balance=0, @transactions=[]> 
+2.6.5 :003 >   account.deposit(5000)
+ => "Credit of amount £5000 was successfull" 
+2.6.5 :004 >   account.deposit(2000)
+ => "Credit of amount £2000 was successfull" 
+2.6.5 :005 >   account.withdraw(1000)
+ => "Debit of amount £1000 was successfull" 
+2.6.5 :006 >   account.print_statement
+date || credit || debit || balance 
+22/04/2020|| || 1000.00 ||6000.00
+22/04/2020||  2000.00 || ||7000.00
+22/04/2020||  5000.00 || ||5000.00
+```
 
 
 
