@@ -10,16 +10,16 @@ class Statement
   def printer
     history = []
     history << HEADER
-    @transactions.each do |transaction|
-      history << "#{transaction.date}" + "||" + "#{select_type(transaction)}" + "||" + "#{format(transaction.balance)}" 
+    @transactions.reverse.each do |line|
+      history << "#{line.date}" + "||" + "#{select_type(line)}" + "||" + "#{format(line.balance)}" 
     end
     history.join("\n")
   end
   private
   
-  def select_type(transaction)
-    amount = format(transaction.amount)
-    transaction.type == :credit ? "  #{amount} || " : " || #{amount} "
+  def select_type(line)
+    amount = format(line.amount)
+    line.type == :credit ? "  #{amount} || " : " || #{amount} "
   end
 
   def format(value)
