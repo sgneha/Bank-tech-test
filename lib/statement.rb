@@ -5,6 +5,7 @@ class Statement
   end
 
   def printer
-    []
+    @transactions
+    
   end
 end
