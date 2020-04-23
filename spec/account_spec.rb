@@ -60,5 +60,8 @@ describe Account do
       allow(Time).to receive(:now).and_return(@time)
       expect { account.print_statement }.to output("date || credit || debit || balance \n#{@time.strftime("%d/%m/%Y")}||  1000.00 || ||1000.00").to_stdout
     end
+    it 'print blank bank statement if no transactions' do
+      expect { account.print_statement }.to output("date || credit || debit || balance ").to_stdout
+    end
   end
 end
