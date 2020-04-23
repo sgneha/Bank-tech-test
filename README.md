@@ -51,6 +51,17 @@ I will able be to see date,credit/debit amount and balance in my statement
 
 ![class Diagram](public/class_diagram.png)
 
+## Approach 
+
+* According to the requirements, I have extracted some User stories.
+* Using these User Stories made a Class Diagram.
+* There are three classes Account,Transaction and Statement.
+   * The Account class is from where user interacts.This class has account balance and list of transactions.
+     Whenever user wants to deposit or withdraw,a new transaction is initialized.
+     When user wants to print statement a new statement is initialized with list of his transactions.
+   * The Transaction class have details of transaction like date,type(credit/debit),amount and balance.
+   * The Statement class has list of transactions which it uses to print in a particular format.
+
 
 
 ## Built With
